@@ -247,7 +247,7 @@ const UI = {
         UI.initSetting('treat_lossless', 7);
         UI.initSetting('jpeg_video_quality', 5);
         UI.initSetting('webp_video_quality', 5);
-        UI.initSetting('video_quality', 2);
+        UI.initSetting('video_quality', 3); // 품질 상향
         UI.initSetting('anti_aliasing', 0);
         UI.initSetting('video_area', 65);
         UI.initSetting('video_time', 5);
@@ -269,7 +269,7 @@ const UI = {
         UI.initSetting('toggle_control_panel', false);
         UI.initSetting('enable_perf_stats', false);
         UI.initSetting('virtual_keyboard_visible', false);
-        UI.initSetting('enable_ime', false);
+        UI.initSetting('enable_ime', true); // ime 활성화
         UI.initSetting('enable_webrtc', false);
         UI.initSetting('enable_hidpi', false);
         UI.toggleKeyboardControls();
@@ -300,6 +300,8 @@ const UI = {
             UI.initSetting('enable_webp', true);
             UI.initSetting('resize', 'remote');
         }
+
+        UI.forceSetting('resize', 'scale');
 
         UI.setupSettingLabels();
         UI.updateQuality();
