@@ -21,7 +21,7 @@
   "scripts": {
     "lint": "eslint app core po/po2js po/xgettext-html tests utils",
     "test": "karma start karma.conf.js",
-    "prepublish": "node ./utils/use_require.js --as commonjs --clean",
+    "prepublish": "node ./utils/use_require.js --clean",
     "build": "webpack --config webpack.config.js",
     "build-production": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
